@@ -12,8 +12,10 @@ const Banner = () => {
                             <a href="#slide2" className="btn btn-circle">❯</a>
                         </div>
                         <div className="text-center my-auto mx-auto w-1/2">
-                            <div><h2 className="text-4xl mb-2 font-bold">Currently on Hot sale</h2></div>
-                            <p className="text-base font-bold">By Novaline Brands</p>
+                            <div className="p-14  border-solid border-4 border-gray-900">
+                                <div><h2 className="text-4xl mb-2 font-bold">Currently on Hot sale</h2></div>
+                                <p className="text-base font-bold">By Novaline Brands</p>
+                            </div>
                         </div>
                     </div>
                     {/* slide2 */}
@@ -24,8 +26,10 @@ const Banner = () => {
                             <a href="#slide3" className="btn btn-circle">❯</a>
                         </div>
                         <div className="text-center my-auto mx-auto w-1/2">
-                            <div><h2 className="text-4xl mb-2 font-bold">Currently on Hot sale</h2></div>
-                            <p className="text-base font-bold">By Elegant Brands</p>
+                            <div className="p-14  border-solid border-4 border-gray-900">
+                                <div><h2 className="text-4xl mb-2 font-bold">Currently on Hot sale</h2></div>
+                                <p className="text-base font-bold">By Elegant Brands</p>
+                            </div>
                         </div>
                     </div>
                     {/* slide3 */}
@@ -36,8 +40,10 @@ const Banner = () => {
                             <a href="#slide1" className="btn btn-circle">❯</a>
                         </div>
                         <div className="text-center my-auto mx-auto w-1/2">
-                            <div><h2 className="text-4xl mb-2 font-bold">Currently on Hot sale</h2></div>
-                            <p className="text-base font-bold">By Libura Brands</p>
+                            <div className="p-14  border-solid border-4 border-gray-900">
+                             <div><h2 className="text-4xl mb-2 font-bold">Currently on Hot sale</h2></div>
+                             <p className="text-base font-bold">By Libura Brands</p>
+                            </div>
                         </div>
                     </div>
                 </div>
