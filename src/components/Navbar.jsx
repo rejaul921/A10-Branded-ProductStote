@@ -11,7 +11,14 @@ const Navbar = () => {
 
                 <div className="flex flex-row-reverse items-center gap-1">
                     <div><img className="w-12 h-12 rounded-xl" src="/soondor.png" alt="" /></div>
-                    <div><h3 className="text-base font-semibold">Log in</h3></div>
+                    <div className="font-bold"><NavLink
+                        to="/login"
+                        className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "text-white bg-blue-700 p-2 rounded-lg" : ""
+                        }
+                    >
+                        Log in
+                    </NavLink></div>
                 </div>
             </div>
             <hr />

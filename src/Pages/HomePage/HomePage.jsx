@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Banner from "../../components/Banner";
 import { useState } from "react";
 import Brand from "../../components/Brand";
+import AllProducts from "../../components/AllProducts";
 
 
 const HomePage = () => {
@@ -27,6 +28,8 @@ console.log(ourBrands);
                     }
                 </div>
             </div>
+            <hr className=" mt-10 border-fuchsia-700 border-2" />
+            <AllProducts></AllProducts>
             here home page item
         </div>
     );
