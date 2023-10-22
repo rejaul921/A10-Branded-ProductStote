@@ -6,6 +6,7 @@ import HomePage from '../Pages/HomePage/HomePage';
 import AddProduct from '../components/AddProduct';
 import Login from '../components/Login';
 import Register from '../components/Register';
+import BrandedProducts from '../components/BrandedProducts';
 const Router = createBrowserRouter([
     {
         path:"/",
@@ -27,6 +28,10 @@ const Router = createBrowserRouter([
             {
                 path:"/register",
                 element:<Register></Register>
+            },
+            {
+                path:"/ourBrands/:name",
+                element:<BrandedProducts></BrandedProducts>
             }
         ]
     }
