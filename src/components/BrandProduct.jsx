@@ -17,7 +17,7 @@ const BrandProduct = ({brandProduct}) => {
     <div className="mt-1"><h2 className="text-lg font-semibold"> Price: {brandProduct.price} RO</h2></div>
     <Link to={`/productdetails/${_id}`}><button className="p-1 mr-1 font-bold bg-green-800 text-white rounded-lg">Details</button>
     </Link>
-    <button className="p-1 ml-1 font-bold bg-green-800 text-white rounded-lg">Update</button>
+    <Link to={`/updateproduct/${_id}`}><button className="p-1 ml-1 font-bold bg-green-800 text-white rounded-lg">Update</button></Link>
 </div>
     );
 };

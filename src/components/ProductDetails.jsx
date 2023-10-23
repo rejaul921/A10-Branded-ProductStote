@@ -24,7 +24,6 @@ const ProductDetails = () => {
                 </div>
                 
             </div>
-            product details will be shown here
         </div>
     );
 };

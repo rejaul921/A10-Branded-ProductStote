@@ -3,6 +3,7 @@ import Banner from "../../components/Banner";
 import { useState } from "react";
 import Brand from "../../components/Brand";
 import AllProducts from "../../components/AllProducts";
+import CustomersReview from "../../components/CustomersReview";
 
 
 const HomePage = () => {
@@ -30,7 +31,11 @@ console.log(ourBrands);
             </div>
             <hr className=" mt-10 border-fuchsia-700 border-2" />
             <AllProducts></AllProducts>
-            here home page item
+            <div className="mx-auto gap-4 flex justify-around w-11/12">
+            <hr className=" w-1/3 mx-auto my-10 border-fuchsia-700 border-1" />
+            <hr className=" w-1/3 mx-auto my-10 border-fuchsia-700 border-1" />
+            </div>
+            <CustomersReview></CustomersReview>
         </div>
     );
 };
