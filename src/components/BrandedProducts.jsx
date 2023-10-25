@@ -12,12 +12,12 @@ const BrandedProducts = () => {
         .then(res=>res.json())
         .then(data=>setAllProducts(data))
     },[])
-    console.log(AllProducts);
+    // console.log(AllProducts);
 
     const{name}=useParams();
 
         const findBrandProducts = AllProducts.filter(product => product.brandname == name)
-        console.log(findBrandProducts);
+        // console.log(findBrandProducts);
 
 
     return (

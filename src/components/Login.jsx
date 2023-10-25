@@ -1,14 +1,45 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import swal from 'sweetalert';
 
 
 const Login = () => {
+    const {Login,GoogleSignin}=useContext(AuthContext);
+    const location =useLocation();
+    const navigate=useNavigate();
+
 
     const handleLogin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email')
         const password = form.get('password')
-        console.log(email,password)
+        // console.log(email,password)
+
+        Login(email, password)
+        .then(result => {
+            // console.log(result.user)
+            navigate(location?.state? location.state : "/" )
+            return swal("Successfully logged in");
+        })
+        .catch(error => {
+            console.error(error.message)
+            return swal("Please provide valid email and Password");
+        })
+    }
+
+    const googlelog = a => {
+        a.preventDefault();
+        GoogleSignin()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+                navigate(location?.state? location.state : "/" )
+            })
+            .catch(error => {
+                console.error(error)
+            })
     }
         
 
@@ -38,7 +69,7 @@ const Login = () => {
                     </div>
                 </form>
 
-                <div className="py-5">
+                <div onClick={googlelog} className="py-5">
                     <Link><button className="p-3 rounded-xl bg-green-700 text-white">Google Sign In</button></Link>
                 </div>
                 <p className="my-5">Dont have an Account? <Link className="text-green-700 text-lg font-semibold" to="/register">Register</Link></p>

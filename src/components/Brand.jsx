@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const Brand = ({brand}) => {
-    console.log(brand);
+    // console.log(brand);
     const {name}=brand
     return (
         <div className="h-48 mx-auto text-center shadow-xl">

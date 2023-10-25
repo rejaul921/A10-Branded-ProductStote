@@ -11,7 +11,7 @@ const AllProducts = () => {
         .then(res=>res.json())
         .then(data=>setAllProducts(data))
     },[])
-    console.log(AllProducts);
+    // console.log(AllProducts);
     return (
         <div>
             <div className="mx-auto text-center">

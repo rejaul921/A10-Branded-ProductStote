@@ -1,10 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import swal from "sweetalert";
 
 const UpdateProduct = () => {
     const {_id}=useParams();
-    console.log(_id);
+    // console.log(_id);
     const loadedProduct=useLoaderData();
-    console.log(loadedProduct);
+    // console.log(loadedProduct);
 
 
     const handleUpdate = e => {
@@ -18,7 +19,7 @@ const UpdateProduct = () => {
         const description = form.get('description')
         const rating = form.get('rating')
         const product={name, photo, brandname, product_type, price, description, rating};
-        console.log(product)
+        // console.log(product)
         fetch(`http://localhost:5000/updateproduct/${loadedProduct._id}`, {
             method:'PUT',
             headers:{
@@ -29,6 +30,9 @@ const UpdateProduct = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
+            if(data.modifiedCount>0){
+                swal("Updated successfully")
+            }
         })
     }
 

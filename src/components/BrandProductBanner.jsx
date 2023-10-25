@@ -3,8 +3,8 @@
 const BrandProductBanner = ({findBrandProducts, name}) => {
     const allPhoto=findBrandProducts.map(product=>product.photo)
     const brandName=name
-    console.log(findBrandProducts);
-    console.log(allPhoto);
+    // console.log(findBrandProducts);
+    // console.log(allPhoto);
     return (
         <div>
             <div className="carousel w-full">

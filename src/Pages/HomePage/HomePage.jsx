@@ -14,7 +14,7 @@ useEffect(()=>{
     .then(res=>res.json())
     .then(data=> setOurBrands(data));
 },[])
-console.log(ourBrands);
+
 
     return (
         <div>

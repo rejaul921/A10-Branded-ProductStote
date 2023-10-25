@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import swal from 'sweetalert';
 
 
 const Register = () => {
+
+    const {createUser}=useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
@@ -10,7 +15,24 @@ const Register = () => {
         const photo = form.get('photo')
         const email = form.get('email')
         const password = form.get('password')
-        console.log(name,photo,email,password)
+        // console.log(name,photo,email,password)
+
+        const passwordExpression = /^(?=.*[!@#$%^&*])(?=.*[A-Z]).{6,}$/;
+        if (!passwordExpression.test(password)) {
+            swal("Password must have a special character, a capital letter, and be at least 6 characters long.");
+            return;
+        }
+
+        createUser(email, password, name, photo)
+        .then(createdUser => {
+            // console.log(createdUser.user)
+            
+            return swal("Successfully created an user")
+        })
+        .catch(error => {
+            console.error(error)
+            return swal("already user exsits")
+        })
     }
         
 
