@@ -14,8 +14,8 @@ const AddProduct = () => {
         const description = form.get('description')
         const rating = form.get('rating')
         const product={name, photo, brandname, product_type, price, description, rating};
-        console.log(product)
-        fetch('http://localhost:5000/addproduct', {
+        // console.log(product)
+        fetch('https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/addproduct', {
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -24,7 +24,7 @@ const AddProduct = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data)
+            // console.log(data)
             if(data.insertedId){
                 swal("Product has been added successfully")          
             }

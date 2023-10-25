@@ -10,7 +10,7 @@ const HomePage = () => {
 const [ourBrands, setOurBrands]=useState([]);
 
 useEffect(()=>{
-    fetch('http://localhost:5000/ourBrands')
+    fetch('https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/ourBrands')
     .then(res=>res.json())
     .then(data=> setOurBrands(data));
 },[])

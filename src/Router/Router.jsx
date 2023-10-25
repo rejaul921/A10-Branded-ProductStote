@@ -44,12 +44,12 @@ const Router = createBrowserRouter([
             {
                 path:"/productdetails/:_id",
                 element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/productdetails/${params._id}`)
+                loader:({params})=>fetch(`https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/productdetails/${params._id}`)
             },
             {
                 path:"/updateproduct/:_id",
                 element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/updateproduct/${params._id}`)
+                loader:({params})=>fetch(`https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/updateproduct/${params._id}`)
             }
         ]
     }

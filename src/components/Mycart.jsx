@@ -10,7 +10,7 @@ const Mycart = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5000/myCart')
+        fetch('https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/myCart')
             .then(res => res.json())
             .then(data => setCartProducts(data));
     },[])
@@ -26,7 +26,7 @@ const Mycart = () => {
 
     const handleRemove=_id=>{
         // console.log('delete',_id)
-        fetch(`http://localhost:5000/myCart/${_id}`,{
+        fetch(`https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/myCart/${_id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

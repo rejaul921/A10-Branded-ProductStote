@@ -8,7 +8,7 @@ const BrandedProducts = () => {
     const [AllProducts, setAllProducts]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/products')
         .then(res=>res.json())
         .then(data=>setAllProducts(data))
     },[])

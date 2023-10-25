@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
     const handleAddtoCart=e=>{
         e.preventDefault();
-        fetch('http://localhost:5000/addToCart', {
+        fetch('https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/addToCart', {
             method:'POST',
             headers:{
                 'content-type':'application/json'

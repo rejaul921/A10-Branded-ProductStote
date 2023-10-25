@@ -20,7 +20,7 @@ const UpdateProduct = () => {
         const rating = form.get('rating')
         const product={name, photo, brandname, product_type, price, description, rating};
         // console.log(product)
-        fetch(`http://localhost:5000/updateproduct/${loadedProduct._id}`, {
+        fetch(`https://soondor-server-side-ayxipmdi8-karims-projects-5951c548.vercel.app/updateproduct/${loadedProduct._id}`, {
             method:'PUT',
             headers:{
                 'content-type':'application/json'
